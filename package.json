@@ -9,9 +9,12 @@
   "dependencies": {
     "usb": "^1.3.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "browserify": "^16.1.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify --bare -o build/Release/rtlsdr.js browser.js"
   },
   "repository": {
     "type": "git",
@@ -31,5 +34,8 @@
   "bugs": {
     "url": "https://github.com/sandeepmistry/rtlsdrjs/issues"
   },
-  "homepage": "https://github.com/sandeepmistry/rtlsdrjs#readme"
+  "homepage": "https://github.com/sandeepmistry/rtlsdrjs#readme",
+  "browser": {
+    "./lib/usb.js": "./lib/web-usb.js"
+  }
 }

@@ -1,1 +1,3 @@
-module.exports = require('./lib/rtlsdr');
+import {RtlSdr} from './lib/rtlsdr'
+
+export {RtlSdr};

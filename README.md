@@ -12,7 +12,7 @@ Supports [Node.js](https://nodejs.org/) and [WebUSB](https://wicg.github.io/webu
 
 ### Software
 
-* [Node.js](https://nodejs.org/) 8.x or later + [node-usb requirements](https://github.com/tessel/node-usb#installation)
+* [Node.js](https://nodejs.org/) v14.13.0 or later + [node-usb requirements](https://github.com/tessel/node-usb#installation)
 * [Web browser that supports WebUSB](https://caniuse.com/#feat=webusb)
 
 ## Setup
@@ -21,17 +21,17 @@ Supports [Node.js](https://nodejs.org/) and [WebUSB](https://wicg.github.io/webu
 
 Install: `npm i rtlsdrjs`
 
-Require: `const RtlSdr = require('rtlsdrjs');`
+Import: `import {RtlSdr, nodejsUsb} from 'rtlsdrjs';`
 
 ### Browser
 
-Download a `rtlsdr.js` build from a [release](https://github.com/sandeepmistry/rtlsdrjs/releases).
-
-Include `rtlsdr.js` in you HTML page: `<script src="path/of/rtlsdr.js"></script>`
+Import: `import {RtlSdr, webUsb} from 'rtlsdrjs';`
 
 ## Usage
 
 ```javascript
+import {RtlSdr, webUsb} from 'rtlsdrjs';
+
 let readSamples = true;
 
 async function start() {
@@ -42,7 +42,7 @@ async function start() {
   //
   // RtlSdr.getDevices() can be used to get a list of all RTL SDR's attached to system
   //
-  const sdr = await RtlSdr.requestDevice();
+  const sdr = await RtlSdr.requestDevice(usb);
 
   //
   // open the device

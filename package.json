@@ -1,6 +1,6 @@
 {
   "name": "rtlsdrjs",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Turn your Realtek RTL2832U based device into an SDR receiver using JavaScript",
   "main": "index.js",
   "directories": {
@@ -9,12 +9,8 @@
   "dependencies": {
     "usb": "^1.3.1"
   },
-  "devDependencies": {
-    "browserify": "^16.1.1"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify --bare -o build/Release/rtlsdr.js browser.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -35,7 +31,7 @@
     "url": "https://github.com/sandeepmistry/rtlsdrjs/issues"
   },
   "homepage": "https://github.com/sandeepmistry/rtlsdrjs#readme",
-  "browser": {
-    "./lib/usb.js": "./lib/web-usb.js"
+  "engines": {
+    "node": ">=14.13.0"
   }
 }

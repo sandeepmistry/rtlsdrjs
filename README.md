@@ -12,7 +12,7 @@ Supports [Node.js](https://nodejs.org/) and [WebUSB](https://wicg.github.io/webu
 
 ### Software
 
-* [Node.js](https://nodejs.org/) 8.x or later + [node-usb requirements](https://github.com/tessel/node-usb#installation)
+* [Node.js](https://nodejs.org/) v14.13.0 or later + [node-usb requirements](https://github.com/tessel/node-usb#installation)
 * [Web browser that supports WebUSB](https://caniuse.com/#feat=webusb)
 
 ## Setup
